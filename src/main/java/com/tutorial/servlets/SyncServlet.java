@@ -13,6 +13,12 @@ public class SyncServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         AsyncContext asyncContext = req.getAsyncContext();
-        asyncContext.start(()->);
+        asyncContext.start(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("async request");
+            }
+        });
+        asyncContext.complete();
     }
 }
