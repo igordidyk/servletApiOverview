@@ -16,15 +16,22 @@ public class HeadersServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Enumeration<String> headerNames = req.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String element = headerNames.nextElement();
-            System.out.println(element + " = " + req.getHeader(element));
-        }
-        if (req.getHeader("Accept-Encoding").contains("gzip")) {
-            new PrintWriter(new GZIPOutputStream(resp.getOutputStream())).write("Gzip encoding");
 
-        }
+        resp.setStatus(200);
+        resp.setStatus(HttpServletResponse.SC_OK);
+        resp.sendRedirect("/");  //302
+        resp.sendError(HttpServletResponse.SC_BAD_REQUEST,"SOMETHING BAD REQUEST");
+        resp.setHeader("Refresh", "5;URL=https://www.google.com.ua");
+
+//        Enumeration<String> headerNames = req.getHeaderNames();
+//        while (headerNames.hasMoreElements()) {
+//            String element = headerNames.nextElement();
+//            System.out.println(element + " = " + req.getHeader(element));
+//        }
+//        if (req.getHeader("Accept-Encoding").contains("gzip")) {
+//            new PrintWriter(new GZIPOutputStream(resp.getOutputStream())).write("Gzip encoding");
+//
+//        }
 //        System.out.println("AuthType = " + req.getAuthType());
 //        System.out.println("ContentLength = " + req.getContentLength());
 //        System.out.println("ContentType = " + req.getContentType());
