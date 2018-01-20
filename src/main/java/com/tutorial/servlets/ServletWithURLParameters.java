@@ -18,6 +18,7 @@ public class ServletWithURLParameters extends HttpServlet {
         String password = req.getParameter("password");
         String email = req.getParameter("email");
 
+
         resp.getWriter().write("<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
                 "<head>\n" +
@@ -38,32 +39,32 @@ public class ServletWithURLParameters extends HttpServlet {
                 "\n" +
                 "</body>\n" +
                 "</html>");
-
-//        String[] emails = req.getParameterValues("email");
-//        for (String s : emails) {
-//            System.out.println(s);
-//        }
-
-//        Enumeration<String> parameterNames = req.getParameterNames();
-//        while (parameterNames.hasMoreElements()) {
-//            String param = parameterNames.nextElement();
-//            System.out.println(param + " = " + req.getParameter(param));
-//        }
-
-//        Map<String, String[]> parameterMap = req.getParameterMap();
-//        System.out.println("RequestURL = " + req.getRequestURL());
-//        System.out.println("RequestURI = " + req.getRequestURI());
-//        System.out.println("ServletPath = " + req.getServletPath());
-//        System.out.println("RemoteHost = " + req.getRemoteHost());
-//        System.out.println("Locale = " + req.getLocale());
-//        System.out.println("LocalAddress = " + req.getLocalAddr());
-//        System.out.println("LocalPort = " + req.getLocalPort());
-//        System.out.println("LocalName = " + req.getLocalName());
-//        System.out.println("Locales = " + req.getLocales().toString());
-//        System.out.println("<!---------------------------------------------!>");
-//        System.out.println(req.getQueryString());
+//
+        String[] emails = req.getParameterValues("email");
+        for (String s : emails) {
+            System.out.println(s);
+        }
+//
+        Enumeration<String> parameterNames = req.getParameterNames();
+        while (parameterNames.hasMoreElements()) {
+            String param = parameterNames.nextElement();
+            System.out.println(param + " = " + req.getParameter(param));
+        }
+//
+        Map<String, String[]> parameterMap = req.getParameterMap();
+        System.out.println("RequestURL = " + req.getRequestURL());
+        System.out.println("RequestURI = " + req.getRequestURI());
+        System.out.println("ServletPath = " + req.getServletPath());
+        System.out.println("RemoteHost = " + req.getRemoteHost());
+        System.out.println("Locale = " + req.getLocale());
+        System.out.println("LocalAddress = " + req.getLocalAddr());
+        System.out.println("LocalPort = " + req.getLocalPort());
+        System.out.println("LocalName = " + req.getLocalName());
+        System.out.println("Locales = " + req.getLocales().toString());
+        System.out.println("<!---------------------------------------------!>");
+        System.out.println(req.getQueryString());
     }
-
+//
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         doGet(req, resp);
