@@ -64,6 +64,7 @@
             <form-error-page>/admin/login-error.jsp</form-error-page>
         </form-login-config>
     </login-config>
+
     <security-constraint>
         <web-resource-collection>
             <web-resource-name>admin jsp</web-resource-name>
@@ -72,6 +73,9 @@
         <auth-constraint>
             <role-name>ADMIN</role-name>
         </auth-constraint>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
     </security-constraint>
     <security-role>
         <role-name>ADMIN</role-name>
