@@ -43,6 +43,18 @@
         <exception-type>javax.servlet.ServletException</exception-type>
         <location>/jsp/errorPage.jsp</location>
     </error-page>
+    
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>/jsp/configurePage.jsp</url-pattern>
+            <!--<el-ignored>false</el-ignored>-->
+            <!--<scripting-invalid>false</scripting-invalid>-->
+            <!--<is-xml>true</is-xml>-->
+            <include-prelude>/jsp/header.jsp</include-prelude>
+            <include-coda>/jsp/footer.jsp</include-coda>
+        </jsp-property-group>
+
+    </jsp-config>
  <!--   <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>/html/default.html</welcome-file>

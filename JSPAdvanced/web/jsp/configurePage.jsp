@@ -1,0 +1,1 @@
+<strong>Configure main page</strong>
