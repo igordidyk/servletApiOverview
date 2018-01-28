@@ -5,5 +5,7 @@
 </head>
 <body>
 this is admin page
+<br>
+<a href="/logout">logout</a>
 </body>
 </html>

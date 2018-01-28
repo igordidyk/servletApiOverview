@@ -6,6 +6,6 @@
 <body>
 error page
 <br>
-
+<a href="/logout">logout</a>
 </body>
 </html>
