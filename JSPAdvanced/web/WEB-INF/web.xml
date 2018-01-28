@@ -37,6 +37,12 @@
         <param-value>mail@gmail.com</param-value>
     </context-param>
 
+
+    <error-page>
+        <!--<error-code>404</error-code>-->
+        <exception-type>javax.servlet.ServletException</exception-type>
+        <location>/jsp/errorPage.jsp</location>
+    </error-page>
  <!--   <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>/html/default.html</welcome-file>
