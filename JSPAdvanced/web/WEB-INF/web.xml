@@ -3,16 +3,41 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-    <!--<servlet>-->
-        <!--<servlet-name>default</servlet-name>-->
-        <!--<servlet-class>com.tutorials.jsp.MainServlet</servlet-class>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>default</servlet-name>-->
-        <!--<url-pattern>/</url-pattern>-->
-    <!--</servlet-mapping>-->
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>com.tutorials.jsp.MainServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
-    <welcome-file-list>
+    <servlet>
+        <servlet-name>init</servlet-name>
+        <!--<jsp-file>/jsp/init.jsp</jsp-file>-->
+        <servlet-class>com.tutorials.jsp.InitServlet</servlet-class>
+        <init-param>
+            <param-name>namespace</param-name>
+            <param-value>test</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>pass</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>init</servlet-name>
+        <url-pattern>/init</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>email</param-name>
+        <param-value>mail@gmail.com</param-value>
+    </context-param>
+
+ <!--   <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>/html/default.html</welcome-file>
     </welcome-file-list>
@@ -20,13 +45,14 @@
     <session-config>
         <session-timeout>200</session-timeout>
     </session-config>
-
+-->
     <!--<icon>-->
         <!--<small-icon></small-icon>-->
         <!--<large-icon></large-icon>-->
     <!--</icon>-->
 
-    <description>
+  <!--
+  <description>
         This web application is asvanced jsp tutorial with web.xml
     </description>
     
@@ -47,6 +73,6 @@
             <encoding>UTF-8</encoding>
         </locale-encoding-mapping>
     </locale-encoding-mapping-list>
-
+-->
 
 </web-app>
