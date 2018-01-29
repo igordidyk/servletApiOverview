@@ -2,10 +2,13 @@ package com.tutorials.jsp;
 
 
 import javax.servlet.*;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.annotation.WebInitParam;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Enumeration;
 
+@WebFilter(value = "/mainFilter", initParams = {@WebInitParam(name = "name", value = "value")})
 public class MainFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
