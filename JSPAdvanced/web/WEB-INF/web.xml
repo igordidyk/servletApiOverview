@@ -138,5 +138,22 @@
         </locale-encoding-mapping>
     </locale-encoding-mapping-list>
 -->
+    
+    <filter>
+        <filter-name>testFilter</filter-name>
+        <filter-class>com.tutorials.jsp.MainFilter</filter-class>
+        <init-param>
+            <param-name>namespace</param-name>
+            <param-value>TEST</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>testFilter</filter-name>
+        <url-pattern>/mainFilter</url-pattern>
+        <!--<dispatcher>REQUEST</dispatcher>-->
+        <!--<dispatcher>INCLUDE</dispatcher>-->
+        <!--<dispatcher>ERROR</dispatcher>-->
+        <!--<dispatcher>FORWARD</dispatcher>-->
+    </filter-mapping>
 
 </web-app>
