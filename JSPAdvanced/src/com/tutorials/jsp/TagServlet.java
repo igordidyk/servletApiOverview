@@ -7,10 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/mainFilter")
-public class MainFilterServlet extends HttpServlet {
+@WebServlet("/tag")
+public class TagServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write("  body  ");
+        resp.sendRedirect("/jsp/createdCustomTag.jsp");
+
     }
 }
